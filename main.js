@@ -236,3 +236,69 @@ const testReduce = arr.reduceRebuilt(function (total, item) {
   return total + item;
 }, 0);
 console.log(`Total = ${testReduce}`); // Total = 28
+
+const isPositiveInteger = (n) => {
+  if (Number.isInteger(n) && n > 0) {
+    console.log("n la so nguyen duong");
+  } else {
+    console.log("n khong phai so nguyen duong");
+  }
+};
+//------------------------
+
+const resolveFunction = (a, b) => {
+  if (a === 0 && b === 0) {
+    console.log("vo so nghiem");
+  } else if (a !== 0 && b === 0) {
+    console.log("nghiem x= 0");
+  } else if (a === 0 && b !== 0) {
+    console.log("vo nghiem");
+  } else {
+    console.log("co nghiem x=", -b / a);
+  }
+};
+//--------------------------
+
+const isPrimeFunction = (n) => {
+  let isPrime = true;
+  if (Number.isInteger(n)) {
+    if (n < 2) {
+      isPrime = false;
+    } else {
+      for (let i = 2; i <= n - 1; i++) {
+        if (n % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+    }
+  }
+  if (isPrime) {
+    console.log(n, "la so nguyen to");
+  } else {
+    console.log(n, "khong phai so nguyen to");
+  }
+};
+//--------------------------
+
+const maths = [1,2,3,4,5,6,7,8,9,10]
+let maxNumber = Math.max(...maths)
+let minNumber = Math.min(...maths)
+//--------------------------
+const sumOdd = maths.reduce((sum, x) => {
+  if (x % 2 !== 0) {
+    sum += x;
+  }
+  return sum
+},0)
+//------------------------------------
+
+const isPerfectsquareNumber = (n) => {
+  if (Math.sqrt(n) % 1 === 0) {
+    console.log(n, 'la so chinh phuong')
+  } else {
+    console.log(n, 'khong phai so chinh phuong')
+  }
+}
+
+
